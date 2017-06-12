@@ -1,0 +1,21 @@
+const int led = 3; // LED conectado al pin 3
+const int pot = 0; // potenciometro conectado al pin A0
+
+int brillo; 
+
+void setup() {
+  pinMode(led, OUTPUT); //declaramos al led como salida
+  //los pin analogicos se declaran como entrada
+  //automaticamente
+}
+
+void loop() {
+  brillo = analogRead(pot) / 4; //maneja valores de 0 a 1023
+  analogWrite(led, brillo); //ahustar intencidad del brillo
+}
+//El proyecto es para entender como leer voltajes analógicos (variables) en  Arduino, también veremos qué es el
+PWM y cómo usarlo para generar salidas analógicas. Como práctica se regula la intensidad del brillo de un LED 
+usando un potenciómetro.
+
+Para este proyectol se necesitan los siguientes componentes: un Arduino, un potenciómetro de 10k, un LED, una 
+resistencia de 330 Ohms, por último un protoboard y cable para las conexiones.  //
